@@ -1,0 +1,24 @@
+Agenda for Day2 :
+---------------
+
+-Looping Statements.
+-Scoping in JavaScript.
+-Hoisting in JavaScript.
+-Introduction to String Methods.
+
+
+Definitions of Concepts:
+
+Looping Statements.
+-----------------
+- Looping statements are used to execute a block of code repeatedly as long as a specified condition is true.
+
+Scoping in JavaScript:
+---------------------
+- Scoping determines the accessibility of variables and functions in different parts of the code.
+
+
+
+-Hoisting in JavaScript.
+----------------------
+- Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the compilation phase before code execution.
