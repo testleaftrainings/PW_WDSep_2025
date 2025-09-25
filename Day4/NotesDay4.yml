@@ -1,0 +1,22 @@
+Agenda for Day2 :
+---------------
+
+-Hoisting in JavaScript.
+-String Methods in JavaScript.
+-Function types.
+
+
+
+Definitions of Concepts:
+
+-Hoisting in JavaScript.
+----------------------
+- Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the compilation phase before code execution.
+
+-String Methods in JavaScript.
+----------------------
+- String methods are built-in functions in JavaScript that allow you to manipulate and perform operations on string data types.
+
+-Function types.
+----------------------        
+- In JavaScript, functions can be categorized into different types based on their declaration and usage, such as named function/function declarations, function expressions, arrow functions, and anonymous functions.
