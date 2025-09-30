@@ -1,0 +1,24 @@
+📑 Agenda for Week2 Day3 - Playwright Basics and Locators 
+🎯 [ Focus: Mastering Locators for Precise Automation ]
+
+
+📆 Date: 30 Sep [Tuesday]
+
+🕝 Session Highlights
+
+Recap
+   - Key Takeaways from previous session.
+
+1. Browser, Context, and Page
+* Breaking Down the Key Concepts  
+* Real-life Use Cases in Automation  
+
+2. Code Your First Test Script
+* Hands-on Activity: Writing and Executing a Basic Script 
+
+3. CSS Selectors  
+* Basic CSS Selector Techniques.  
+* Hands-on Example: Using ID, Class, and Attribute Selectors.
+
+4. XPath Selectors
+* Basic Xpath Locator Techniques.
