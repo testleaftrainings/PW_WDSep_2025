@@ -1,0 +1,40 @@
+📑 Agenda for Week2 Day4 - Get Started with Playwright
+🎯 [ Focus: Kickstart Playwright automation with hands-on basics ]
+
+📆 Date: 06 Oct [Monday]
+
+🕝 Session Highlights
+
+Recap
+   - Key Takeaways from previous session.
+
+1. Configuration file walkthrough
+* A brief learning on config file.
+
+2. Understanding the DOM
+* What is the DOM and How It Works 
+
+3. CSS Selectors  
+* Basic and Advanced CSS Selector Techniques.  
+* Hands-on Example: Using ID, Class, and Attribute Selectors.
+
+4. XPath Selectors
+* Relative vs. Absolute XPath: What's Better?  
+* Practical Use Cases with XPath Examples.  
+
+🕡 Wrap Up / Q&A
+
+📝 Keep your physical notebook and pen handy to sketch out ideas!
+
+
+
+Notes :
+------
+
+id attribute :
+
+input[id="username"] ==> #username
+
+class Attribute:
+
+input[class="decorativeSubmit"]==> .decorativeSubmit
