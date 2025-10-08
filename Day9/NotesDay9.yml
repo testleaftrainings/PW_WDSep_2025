@@ -1,0 +1,95 @@
+📑 Agenda for Week 3 Day 1: Playwright Features
+🎯 [ Focus: Mastering the features of Playwright on Locators, Dropdown & Assertions]  
+
+📆 Date: 28 May [Saturday]
+
+
+1. XPath Selectors
+* Relative vs. Absolute XPath: What's Better? 
+* Advanced relative Xpath- Axes  
+* Practical Use Cases with XPath Examples.
+
+2. Handling Dropdowns  
+* Understanding dropdown types: 'select' tags and custom dropdowns.  
+* Selecting options by value, label, or index.
+* Facebook live example. 
+
+
+NotesDay6 :
+-----------
+Advanced Locators in Playwright :
+--------------------------
+Parent To child   : 
+------------------
+
+//form[@id="login"]/p
+
+GrandParent to child Relation   :
+--------------------------------
+ //div[contains(@class,'dbb')]//input 
+
+Child to parent :      
+----------------
+//input[@id="username"]/parent::p
+
+Grandchild to grandparent :
+-------------------------------
+//input[@id="username"]/ancestor::form
+
+
+Younger sibling to Elder Sibling :
+-----------------------------------
+//input[@id="password"]/preceding-sibling::label
+
+
+Elder sibling to younger sibling :
+----------------------------------
+//label[text()="Username"]/following-sibling::input
+
+Elder Cousin to Younger Cousin :
+--------------------------------
+//input[@id="username"]/following::label
+
+
+Younger Cousin to Elder Cousin:
+---------------------------
+
+//input[@id="password"]/preceding::label
+
+
+
+
+Commonly used Commands :
+------------------------
+
+To create a playwright file - filename.spec.ts
+
+To run the test file - npx playwright test filename.spec.ts
+
+To open the test report - npx playwright show-report
+
+
+Default mode - headless
+
+Select options used based on priority:
+-----------------------------------------
+
+
+1. Select By Value :
+-Stable and less likely to change since the value is often connected to your backend
+
+  await page.selectOption(`#createLeadForm_dataSourceId`,{value:"LEAD_DIRECTMAIL"})
+
+2. Select By Label :
+Tend to change due to business requirements / geography
+Example travel name of places in your website
+
+
+
+3. Select BY Index :
+When ever there is not change in the order of your dropdown can go for select by index 
+
+Non-select tags
+---------------
+1. Locate your dropdown and use click()/ enter the value
+2. locate the particular option from the dropdownlist - clickit
