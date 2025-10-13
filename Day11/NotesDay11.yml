@@ -1,0 +1,82 @@
+📑 Agenda for Week 3 Day 3: TypeScript Fundamentals
+🎯 [ Focus: Mastering the basics of TypeScript with a foundation in JavaScript concepts ]  
+
+📆 Date: 13 October [Monday]
+
+🕝 Session Highlights
+
+Recap
+   - Key Takeaways from Day10. 
+
+
+1. Introduction to TypeScript
+* What is TypeScript, and Why Use It?  
+* Setting Up a TypeScript Environment.  
+* Basic Syntax and First TypeScript Program.  
+
+2. TypeScript Types  
+* Overview of Types in TypeScript:  
+* Hands-on: Declaring Variables with Different Types.  
+
+3. Explicit Types & Annotations 
+* Why Use Type Annotations?  
+* Explicitly Defining Function Parameters and Return Types.  
+* Examples:  
+     * Type Inference vs. Explicit Types. 
+
+--> Breakout session Handson on TypeScript basics. 
+
+4. Type Aliases  
+* What are Type Aliases and why use them?  
+* Syntax and examples.   
+
+5. Object Literals  
+* Defining and using object types in TypeScript.  
+
+6. Type Assertion  
+* What is Type Assertion?  
+* Examples: Converting unknown types.  
+
+
+Notes :
+-------
+
+TypeScript introduction :
+-------------------------
+
+TypeScript Installation commands:
+---------------------------------
+
+1. npm install typescript
+
+2. Check : tsc --version
+
+------------------------------------------------
+
+Note if you want directly run the .ts file follow below steps :
+--------------------------------------------------------------
+
+1. npm install -g ts-node
+
+2. npx tsc --init --> This will create a default tsconfig.json
+
+3. Make below changes in the tsconfig.json
+{
+  "compilerOptions": {
+    "module": "CommonJS"
+  }
+}
+4. Now execute the file directly using the below command
+
+ ts-node filename.ts
+
+ Classroom activity on union type :
+ ------------------------------------
+
+- Create a function that accepts only specific payment methods.
+
+- Create a type alias called PaymentMethod that allows only "UPI", "CreditCard", or "PayPal".
+
+- Write a function makePayment that takes a parameter of type PaymentMethod and prints which payment method is chosen.
+
+- Call the function with "UPI" and "CreditCard" as arguments.
