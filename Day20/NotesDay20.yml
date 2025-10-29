@@ -1,0 +1,86 @@
+📑 Agenda for Week 5 Day 4: Advanced Playwright Interactions
+🎯 Focus: Exploring Advanced Features for Enhanced Playwright Automation
+
+📆 Date: 29 Sep [Wednesday]
+
+⿡ Test Annotations
+
+* Enhancing test readability and control using annotations.
+* Examples: Skipping, focusing specific tests.
+
+⿣  Geolocation
+
+* Simulating geolocation data for location-based testing.
+* Practical use cases: Testing location-restricted functionalities.
+
+⿤ Device Emulation
+
+* Emulating various devices and screen resolutions in Playwright.
+* Practical examples: Testing responsive designs and mobile-specific features.
+
+⿥ Visual Regression Testing
+
+* Capturing and comparing UI snapshots to detect unintended changes.
+* Use cases: Ensuring consistent UI across versions and devices.
+
+⿦  Persistent Context (Non-incognito mode)
+
+* Maintaining login/session state across test runs using user data directories.
+* Real-world example: Avoid repeated logins for authenticated flows.
+
+
+Other Test Annotation
+---
+
+test.only --> focus on a specific test.
+test.skip --> ignore the test from execution
+test.fixme --> track and know failures that are yet tp be fixed
+test.fail --> for negative testing --> test has to fail is the expectation
+test.slow --> triple the timeout of the tests execution --> 30 s --> 60 s for the entire test execution
+test.describe --> grouping the test depending on the status of the other test.
+test.use -->use the functionalities
+
+
+
+
+//Purpose of visual regression testing :
+//1. Detect unintended UI changes in web applications.
+//2. Ensure consistent appearance across different browsers and devices.
+//3. Practical examples: Catching layout shifts, color changes, or missing elements.  
+
+//Purpose of geolocation :
+//1. Simulating geolocation data for location-based testing.
+//2. Testing location-restricted functionalities.
+//3. Practical use cases: Testing location-restricted functionalities.
+//4. Example: Testing location-restricted functionalities.
+
+
+
+//Purpose of device emulation :
+//1. Testing responsive designs and mobile-specific features.
+//2. Simulating various devices and screen resolutions in Playwright.
+//3. Practical examples: Testing responsive designs and mobile-specific features.
+
+
+Persistent Context (Non-incognito mode) :
+--- 
+//1. Maintain login/session state across test runs.
+//2. Real-world example: Avoid repeated logins for authenticated flows.
+//3. Useful for debugging with consistent state across sessions.
+//4. Store user preferences and settings persistently.
+//5. Usage of user data directory to store the session data.
+//6. Example code snippet to launch browser with user data directory:
+//   const context = await browserType.launchPersistentContext(userDataDir, options);
+//7. Benefits: Faster test execution, reduced redundancy in authentication steps.
+
+
+Difference between Storage State and Persistent Context :
+---
+
+//1. Storage State saves session data to a file, while Persistent Context uses a user data directory.
+//2. Storage State is loaded into a new context, whereas Persistent Context maintains state across sessions
+//3. Storage State is useful for sharing session data, while Persistent Context is ideal for long-term state persistence.
+//4. Storage State requires manual saving/loading, while Persistent Context automatically manages state.
+//5. Storage State is typically used for temporary session management, while Persistent Context is used for ongoing sessions.
+//6. Example of Storage State: context.storageState({ path: 'state.json' });
+//7. Example of Persistent Context: browserType.launchPersistentContext(userDataDir, options);

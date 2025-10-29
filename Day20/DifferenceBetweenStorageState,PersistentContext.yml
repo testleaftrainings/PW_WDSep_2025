@@ -1,0 +1,61 @@
+###  1. **Storage State**
+
+* **Meaning:**
+  A *snapshot* of your logged-in session data (like cookies, local storage, etc.) that can be **saved and reused** in Playwright tests.
+
+* **Usage:**
+  Helps you avoid logging in again and again in every test.
+
+* **Example:**
+
+  ```ts
+  // Save storage state after login
+  await page.context().storageState({ path: 'auth.json' });
+
+  // Reuse the saved login state
+  const context = await browser.newContext({ storageState: 'auth.json' });
+  ```
+
+* **Think of it as:**
+   *Taking a photo of your login session* — so you can “load” it later in other tests.
+
+---
+
+###  2. **Persistent Context**
+
+* **Meaning:**
+  A *browser profile folder* that keeps **data permanently on disk** — like how Chrome remembers your history and cookies between sessions.
+
+* **Usage:**
+  Used when you want the same browser context (user data) to persist across multiple runs of Playwright, not just within one test session.
+
+* **Example:**
+
+  ```ts
+  const context = await chromium.launchPersistentContext('user-data', {
+    headless: false,
+  });
+  ```
+
+* **Think of it as:**
+  *Using a permanent browser profile* — like your personal Chrome user where all your data stays saved.
+
+---
+
+### Difference Summary
+
+| Feature             | **Storage State**                       | **Persistent Context**                     |
+| ------------------- | --------------------------------------- | ------------------------------------------ |
+| **Type**            | JSON snapshot                           | Actual browser user folder                 |
+| **Duration**        | Temporary (per test or reused manually) | Permanent (auto-saved in folder)           |
+| **Storage**         | Stored as `.json` file                  | Stored as real browser files               |
+| **Purpose**         | Reuse login session in multiple tests   | Maintain full browser profile between runs |
+| **Common Use Case** | Avoid re-login in CI/CD test runs       | Simulate real user behavior persistently   |
+
+---
+
+###Quick Analogy:
+
+* **Storage State:** Like saving your **login token** in a file.
+* **Persistent Context:** Like using your **browser profile** that remembers everything automatically.
+
