@@ -1,0 +1,129 @@
+📑 **Agenda for Week 7 Day 2: OOPs in TypeScript
+
+🎯 [Focus: Mastering Object-Oriented Programming Concepts in TypeScript]
+
+📆 [11th Nov. Tuesday]
+
+🕝 Session Highlights
+
+⿡ Recap
+Quick review of previous learnings.
+
+⿢ Class & Objects
+
+Understanding the basics of classes and objects in TypeScript.
+Examples: Creating and using classes and objects.
+
+⿣ Constructors
+
+Role of constructors in initializing objects.
+Examples: Using parameterized and default constructors.
+
+⿤ Access Modifiers
+
+Understanding public, private, and protected access modifiers.
+Examples: Controlling access to class properties and methods.
+
+🕡 Wrap Up / Q&A
+
+📝 Keep your physical notebook and pen handy to sketch out ideas and test workflows!
+
+
+OOPS in TypeScript :
+-----------------
+
+1. Class and Object.
+2. Method and properties.
+3. Constructor.
+4. Accessmodifiers.
+5. Encapsulation.
+6. Inheritance.
+7. Polymorphism.
+8. Interface and Abstraction
+
+What is OOPS?
+OOPS stands for Object Oriented Programming System. It is a programming paradigm that uses "objects
+
+What is Class and Object??
+
+Class is a blueprint or template to create objects.
+
+Object is an instance of a class.
+
+----------------------------------------------------------------
+
+Properties and Methods
+----------------------
+
+property :Informartion of that particular page
+
+method : action performed on that page.
+
+---------------------------------
+
+Real life example of Class and Object, Properties and Methods:
+
+###  What is a *Class*?
+
+A *class* is like a *blueprint* or *template* for creating something.
+
+Think of it like this:
+When a car company (like Toyota) designs a new model — say the *Innova* — they first create a *design or blueprint*.
+That blueprint has details like:
+
+* The engine type
+* Number of seats
+* Fuel capacity
+* Basic shape and dimensions
+
+But the *blueprint itself is not a car* — it’s just a design or a plan.
+
+class CarInnova {
+//properties:Informartion of thst particular page
+properties : string
+
+//methods:action performed on that page.
+method(){
+properties
+}
+}
+
+let variableNameFeature1 = new CarInnova() // Object creation //variableNameFeature1 is the object
+
+
+In the above code:
+
+Here, class CarInnova is the *blueprint*.
+It tells us what a “CarInnova” looks like and what it can do — its *properties* (features) and *methods* (actions).
+
+
+
+🧩 Step 1: What is a Constructor?
+
+A constructor is a special method inside a class that runs automatically when you create an object.
+It’s used to initialize the object’s properties (like giving each car its own color, engine type, etc.)
+
+
+AccessModifiers:
+
+1. public : can be accessed inside and outside of the class
+2. protected: can be accessed inside the class as well as the related class --> relationship--> inherit
+3. private: not accessible outisde the class --> give permission to access or to rewrite "get" and "set"
+
+4. readonly: constant/final --> cannot change the assigned value
+5. static:
+
+
+
+
+
+
+
+
+
+
+
+
+faker library installation :
+
+npm install @faker-js/faker
