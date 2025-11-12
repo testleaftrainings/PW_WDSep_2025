@@ -1,0 +1,129 @@
+
+📑 Agenda for Week 07 Day 02: Inheritance in Typescript
+🎯 [Focus: Mastering Inheritance Concepts in TypeScript]
+
+
+📆 [12th Nov Wednesday]
+
+🕝 Session Highlights
+
+⿡ Recap
+Quick review of previous learnings.
+
+
+⿤ Access Modifiers
+
+Understanding public, private, and protected access modifiers.
+Examples: Controlling access to class properties and methods.
+
+⿥ Inheritance
+
+Exploring the concept of inheritance for code reuse.
+Examples: Implementing single and multilevel inheritance.
+
+🕡 Wrap Up / Q&A
+
+📝 Keep your physical notebook and pen handy to sketch out ideas and test workflows!
+
+
+Inheritance :
+
+1. Single Inheritance :
+
+classA{}
+classB extends A{}
+
+2. Multilevel Inheritance :
+
+class A{}
+
+class B extends A{}
+class C extends B{}
+
+3. Hierarchical inheritance 
+
+class A{}
+
+class B extends A{}
+class C extends A{}
+
+4. Hybrid Inheritance
+
+A combination of two or more types of inheritnace (e.x : multilevel and Hierarchical)
+
+
+5. Multiple Inheritance
+Typescript does not support multiple inheritnace using classes.
+Can be achieved through interface.
+
+
+
+
+
+What super() Does
+
+When you use extends (inheritance), the child class constructor must call super() first —
+because it initializes the parent class (superclass) before the child’s constructor executes.
+
+It ensures all properties of the parent class (eName, eid, ephno, eSalary) are properly initialized before the child (HR) starts doing its own work.
+
+Without super(), you can’t access this inside the child constructor
+
+
+
+What is static?
+
+The static keyword makes a property or method belong to the class itself, not to the individual objects created from it.
+
+In the code:
+
+public static eid: string
+
+
+This means eid is a class-level variable, not an object-level variable.
+
+
+ In the sample code :
+EmployeeSignUp.eid = "eid1234";
+
+
+You are assigning the value directly to the class, not to each employee object.
+
+So no matter how many objects you create:
+
+const emp1 = new EmployeeSignUp();
+const emp2 = new EmployeeSignUp();
+
+console.log(EmployeeSignUp.eid);  // eid1234
+
+
+✅Both emp1 and emp2 share the same static property eid.
+
+ Why Use static?
+1️⃣ Common data for all objects
+
+If you have a property that should be the same for all instances, make it static.
+Example:
+
+Company name
+
+Organization code
+
+Application version
+
+Common configuration constants
+
+2️⃣ Access without creating an object
+
+You can use it without new:
+
+console.log(EmployeeSignUp.eid);
+
+
+No need to do:
+
+emp.eid; // ❌ Not accessible like this
+
+3️⃣ Memory efficiency
+
+It’s stored once in memory (at the class level), not duplicated for every object.
