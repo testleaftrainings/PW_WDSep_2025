@@ -1,0 +1,75 @@
+
+/* 1. What Are Fixtures in Playwright?
+
+Think of a fixture as a “ready-made item” that Playwright gives to every test.
+
+Example:
+
+page → a fixture
+
+browser → a fixture
+
+You can also create your own fixtures, like:
+
+lp → LoginPage object
+wp → WelcomePage object
+hp → HomePage object
+lp → LeadPage object
+clp → CreateLeadPage object
+vp → ViewLeadPage object
+
+
+Now your test can directly use:
+
+await lp.login();
+await clp.enterMandatoryDetails();
+await vp.verifyFirstName();
+
+
+Without creating class objects again and again1 
+
+-----------------------------------------------------------------
+
+Step 1 — Import all page objects
+import { LoginPage } from "../pages/01-LoginPage";
+import { WelcomePage } from "../pages/02-WelcomePage";
+// ... etc
+
+
+This brings all your Page Object classes into this file.
+
+Step 2 — Create a type (like a structure)
+type myFixtures = {
+  lp: LoginPage,
+  wp: WelcomePage,
+  hp: HomePage,
+  lp: LeadPage,
+  clp: CreateLeadPage,
+  vp: ViewLeadPage
+}
+
+
+This is just telling Playwright:
+
+“I am creating fixtures, and these are the types for each one.”
+
+-------------------------------------------------------------------------
+
+Step 3 — Extend the base test
+export const test = baseTest.extend<myFixtures>({
+
+
+This means:
+
+"I want to add my custom fixtures to Playwright’s default test."
+
+------------------------------------------------------------------------
+
+Step 4 — Creating fixtures one by one
+
+Example:
+
+lp: async ({page}, use) => {
+    const lp = new LoginPage(page); // Create object
+    await use(lp); // Give it to the test
+},*/
