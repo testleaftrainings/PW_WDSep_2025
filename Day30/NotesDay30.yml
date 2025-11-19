@@ -1,0 +1,151 @@
+📑 Agenda for Week 9 Day 4: POM in TypeScript and Framework Walkthrough
+
+📆 19th Nov, Wednesday
+
+🕝 Session Highlights
+
+⿡ Recap
+Quick review of previous learnings.
+
+1. Polymorphism
+Understanding method overriding and runtime behavior.
+Examples: Creating multiple forms of behavior from a single interface.
+
+2. Geolocation:
+
+
+2. MCP Server:
+
+
+3. Playwright Hybrid Framework Walkhrough 
+
+
+🕡 Wrap Up / Q\&A
+
+📝 Keep your physical notebook and pen handy to sketch out ideas and test workflows!
+
+Method Overloading :
+------------------
+
+Method overloading is a feature that allows a class to have more than one method with the same name, but different parameters (different type or number of parameters).
+
+Method Overriding :
+-------------------
+
+Method overriding is a feature that allows a subclass or child class to provide a specific implementation of a method that is already defined in its superclass or parent class.
+Examples: Creating multiple forms of behavior from a single interface.
+
+About MCP Server
+
+MCP Server(Playwright Context)
+ What is an MCP Server?
+
+An MCP Server (Model Context Protocol Server) is a small program that helps ChatGPT talk to Playwright and run automation tasks outside the chat window.
+
+Think of it as a bridge that connects ChatGPT ↔️ Playwright.
+
+Explanation
+
+MCP server lets ChatGPT run your Playwright tests, read logs, open browsers, or interact with files on your system — safely and in a controlled way.
+
+Without MCP:
+
+ChatGPT can only talk to you
+
+It cannot run Playwright tests on your machine
+
+With MCP:
+
+ChatGPT can run Playwright scripts
+
+View screenshots
+
+Read test results
+
+Help debug failures
+
+Open CLI commands
+
+Even generate new .spec.ts files in your repo
+
+All because the MCP server acts like a messenger in the middle.
+
+Simple Diagram
+ChatGPT  <---->  MCP Server  <---->  Playwright / Your Local Machine
+
+
+ChatGPT doesn’t directly access your system.
+Everything goes through the MCP server.
+
+ Why Use MCP with Playwright?
+
+Because it allows ChatGPT to:
+
+✔️ Run Playwright tests (example: npx playwright test)
+✔️ Open test reports
+✔️ Read or update .spec.ts files
+✔️ Read logs, screenshots, videos
+✔️ Debug your failures
+✔️ Create new Playwright test scripts
+✔️ Modify the existing automation framework
+
+All secure, because you control what the AI can access.
+
+🔧 Technical but Beginner Explanation
+
+An MCP server:
+
+Lists what tools the AI can use
+(e.g., “runCommand”, “readFile”, “writeFile”)
+
+Exposes only specific safe folders
+
+Defines what commands can be run
+
+Returns results back to ChatGPT
+
+Ensures AI cannot misuse your system
+
+So your Playwright directory may look like:
+
+playwright-project/
+   ├── tests/
+   ├── pages/
+   ├── utils/
+   └── mcp-server/    ← your MCP connector
+
+
+The server tells ChatGPT:
+
+“You are allowed to read tests/, modify tests/, and run npx playwright commands”.
+
+Explnation on working
+
+You say to ChatGPT:
+
+“Run my LoginTest.spec.ts”
+
+ChatGPT → (via MCP server) → Your machine:
+
+Runs:
+
+npx playwright test tests/LoginTest.spec.ts
+
+
+Your MCP server captures:
+
+Test output
+
+Errors
+
+Screenshots
+
+Then returns them to ChatGPT.
+
+You get:
+
+What failed
+
+Why it failed
+
+Suggestions for fix
