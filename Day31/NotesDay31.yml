@@ -1,0 +1,23 @@
+📑 Agenda: Framework Walkthrough
+
+📆 20th Nov, Thursday
+
+🕝 Session Highlights
+
+⿡ Recap
+Quick review of previous learnings.
+
+1. Geolocation:  
+In Playwright, geolocation means simulating a user’s location by setting custom latitude and longitude for testing location-dependent application features. 
+
+2. CI Using GitActions:
+In Playwright, CI using GitHub Actions means automatically running your Playwright test suite in GitHub’s cloud environment 
+whenever code is updated—ensuring fast feedback, clean builds, and bug-free deployments.
+
+
+3. Playwright Hybrid Framework Walkhrough 
+
+
+🕡 Wrap Up / Q\&A
+
+📝 Keep your physical notebook and pen handy to sketch out ideas and test workflows!

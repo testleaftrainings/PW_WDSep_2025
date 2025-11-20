@@ -1,0 +1,15 @@
+Commands for Allure Reports:
+---------------------------
+in the configuration make below changes:
+reporter: [['html'], ['allure-playwright']],
+
+And execute below commands in the terminal :
+
+1. npm i -D allure-playwright
+
+2. npm i -g allure-commandline --save-dev
+
+3. Execute the file for which you may require the report using the command:
+   npx playwright test filename.spec.ts
+
+4. allure serve
